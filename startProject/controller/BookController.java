@@ -27,7 +27,7 @@ public class BookController {
 		logger.info("Book comming for insertion : {}", book);
 		if(bookhashmap.containsKey(book.getId())) 
 		{
-			logger.error("Book already present");
+			logger.error("Book is already present");
 			return new ResponseEntity(HttpStatus.BAD_REQUEST); 
 		}
 		bookhashmap.put(book.getId(),book);
